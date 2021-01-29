@@ -23,49 +23,19 @@ export const Introduction = () => {
       <Grid container>
         <S.ContainerText item md={6} lg={6}>
           <S.CustomDivText>
-            <Typography
-              style={{
-                fontSize: 20,
-                color: darkMode.darkMode ? Colors.White : Colors.Black,
-              }}
-              color='inherit'
-            >
+            <S.CustomText darkMode={darkMode.darkMode} color='inherit'>
               Olá, eu sou
-            </Typography>
-            <S.CustomTextIntroduction
-              style={{
-                fontWeight: 'bold',
-                color: darkMode.darkMode ? Colors.White : Colors.Black,
-              }}
-              color='inherit'
-            >
+            </S.CustomText>
+            <S.CustomTextIntroduction darkMode={darkMode.darkMode} color='inherit'>
               Julio Cesar de Medeiros.
             </S.CustomTextIntroduction>
-            <Typography
-              style={{
-                fontSize: 20,
-                color: darkMode.darkMode ? Colors.White : Colors.Black,
-              }}
-              color='inherit'
-            >
+            <S.CustomText darkMode={darkMode.darkMode} color='inherit'>
               Desenvolvedor Full Stack
-            </Typography>
+            </S.CustomText>
             <S.LinkLikedin variant='subtitle1' href='https://www.linkedin.com/in/julio-cesar-de-medeiros/'>
               <S.ButtonLinkedin variant='contained'>
-                <Typography
-                  color='inherit'
-                  style={{
-                    marginRight: 4,
-                    fontSize: 11,
-                    fontWeight: 'bold',
-                    color: '#FFF',
-                  }}
-                >
-                  In
-                </Typography>
-                <Typography color='inherit' style={{ fontSize: 15, color: '#FFF' }}>
-                  Linkedin
-                </Typography>
+                <S.CustomTextInLinkedin color='inherit'>In</S.CustomTextInLinkedin>
+                <S.CustomTextLinkedin color='inherit'>Linkedin</S.CustomTextLinkedin>
               </S.ButtonLinkedin>
             </S.LinkLikedin>
           </S.CustomDivText>

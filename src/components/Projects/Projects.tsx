@@ -23,6 +23,9 @@ export const Projects = () => {
 
   return (
     <S.CustomDiv darkMode={darkMode.darkMode}>
+      <S.CustomDivCorpo>
+        <S.CustomTextProjetos darkMode={darkMode.darkMode}>Projetos</S.CustomTextProjetos>
+      </S.CustomDivCorpo>
       <div
         style={{
           display: 'flex',
@@ -30,48 +33,11 @@ export const Projects = () => {
           padding: 30,
         }}
       >
-        <Typography
-          style={{
-            fontSize: 32,
-            fontWeight: 'bold',
-            color: darkMode.darkMode ? Colors.White : Colors.Black,
-            padding: 8,
-          }}
-        >
-          Projetos
-        </Typography>
-      </div>
-      <div
-        style={{
-          display: 'flex',
-          justifyContent: 'center',
-          padding: 30,
-        }}
-      >
-        <S.CustomCard
-          darkMode={darkMode.darkMode}
-          elevation={10}
-          onClick={navigate}
-          style={{
-            backgroundColor: darkMode.darkMode ? Colors.Background : Colors.White,
-            maxHeight: 300,
-            maxWidth: 400,
-            cursor: 'pointer',
-            paddingTop: 30,
-          }}
-        >
+        <S.CustomCard darkMode={darkMode.darkMode} elevation={10} onClick={navigate}>
           <CardContent style={{ textAlign: 'center' }}>
-            <Typography
-              style={{
-                fontSize: 16,
-                color: darkMode.darkMode ? Colors.White : Colors.Black,
-                fontWeight: 700,
-              }}
-              color='inherit'
-              paragraph
-            >
+            <S.CustomTextAcesso darkMode={darkMode.darkMode} color='inherit' paragraph>
               Acesse o meu repositorio para ver os projetos realizados por mim :)
-            </Typography>
+            </S.CustomTextAcesso>
             <CardContent
               style={{
                 display: 'flex',

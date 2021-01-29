@@ -37,72 +37,27 @@ export const Toolbar = (props: IToolbarProps) => {
 
         <S.ContainerBotoes>
           <S.CustomToolbarText>
-            <S.CustomTypography
-              onClick={props.handleScrollIntroduction}
-              style={{
-                fontSize: 16,
-                fontWeight: 'bold',
-                color: darkMode.darkMode ? Colors.White : Colors.Black,
-                cursor: 'pointer',
-              }}
-              noWrap
-            >
+            <S.CustomTypography darkMode={darkMode.darkMode} onClick={props.handleScrollIntroduction} noWrap>
               Introdução
             </S.CustomTypography>
           </S.CustomToolbarText>
           <S.CustomToolbarText>
-            <S.CustomTypography
-              onClick={props.handleScrollAbout}
-              style={{
-                fontSize: 16,
-                fontWeight: 'bold',
-                color: darkMode.darkMode ? Colors.White : Colors.Black,
-                cursor: 'pointer',
-              }}
-              noWrap
-            >
+            <S.CustomTypography darkMode={darkMode.darkMode} onClick={props.handleScrollAbout} noWrap>
               Sobre
             </S.CustomTypography>
           </S.CustomToolbarText>
           <S.CustomToolbarText>
-            <S.CustomTypography
-              onClick={props.handleScrollProjects}
-              style={{
-                fontSize: 16,
-                fontWeight: 'bold',
-                color: darkMode.darkMode ? Colors.White : Colors.Black,
-                cursor: 'pointer',
-              }}
-              noWrap
-            >
+            <S.CustomTypography darkMode={darkMode.darkMode} onClick={props.handleScrollProjects} noWrap>
               Projetos
             </S.CustomTypography>
           </S.CustomToolbarText>
           <S.CustomToolbarText>
-            <S.CustomTypography
-              onClick={props.handleScrollKnowLedge}
-              style={{
-                fontSize: 16,
-                fontWeight: 'bold',
-                color: darkMode.darkMode ? Colors.White : Colors.Black,
-                cursor: 'pointer',
-              }}
-              noWrap
-            >
+            <S.CustomTypography darkMode={darkMode.darkMode} onClick={props.handleScrollKnowLedge} noWrap>
               Conhecimentos
             </S.CustomTypography>
           </S.CustomToolbarText>
           <S.CustomToolbarText>
-            <S.CustomTypography
-              onClick={props.handleScrollFooter}
-              style={{
-                fontSize: 16,
-                fontWeight: 'bold',
-                color: darkMode.darkMode ? Colors.White : Colors.Black,
-                cursor: 'pointer',
-              }}
-              noWrap
-            >
+            <S.CustomTypography darkMode={darkMode.darkMode} onClick={props.handleScrollFooter} noWrap>
               Contatos
             </S.CustomTypography>
           </S.CustomToolbarText>

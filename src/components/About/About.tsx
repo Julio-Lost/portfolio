@@ -17,33 +17,14 @@ export const About = () => {
           <S.CustomImg src={'/img/me.jpg'} alt='me' darkMode={darkMode.darkMode} width={200} height={200} />
         </S.CustomDivText>
         <S.CustomDivAboutMe item md={7}>
-          <Typography
-            style={{
-              fontSize: 32,
-              color: darkMode.darkMode ? Colors.White : Colors.Black,
-              fontWeight: 'bold',
-              marginBottom: 15,
-            }}
-            color='inherit'
-          >
+          <S.CustomTexAbout darkMode={darkMode.darkMode} color='inherit'>
             Sobre mim
-          </Typography>
-          <S.CustomTextAboutMe
-            style={{
-              color: darkMode.darkMode ? Colors.White : Colors.Black,
-            }}
-            color='inherit'
-            paragraph
-          >
+          </S.CustomTexAbout>
+          <S.CustomTextAboutMe darkMode={darkMode.darkMode} color='inherit' paragraph>
             Meu nome é Julio Cesar de Medeiros, tenho {idade} anos e moro atualmente na cidade de Vila Velha - ES. Estou cursando Análise e
             Desenvolvimento de Sistemas pela Universidade de Vila Velha, UVV/Vila Velha.
           </S.CustomTextAboutMe>
-          <S.CustomTextAboutMe
-            style={{
-              color: darkMode.darkMode ? Colors.White : Colors.Black,
-            }}
-            color='inherit'
-          >
+          <S.CustomTextAboutMe darkMode={darkMode.darkMode} color='inherit'>
             Eu sou um dev procurando resolver problemas do mundo real. Tenho paixão por aprender e compartilhar meu conhecimento com os
             outros.
           </S.CustomTextAboutMe>

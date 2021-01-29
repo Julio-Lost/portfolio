@@ -2,15 +2,21 @@ import { Toolbar } from '@material-ui/core';
 import styled from 'styled-components';
 import { Colors } from '../../../shared/constants';
 
-export const CustomToolbar = styled(Toolbar)<{ darkMode: boolean }>`
-  background-color: ${props => (props.darkMode ? Colors.Background : '#56dafe')};
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
+interface FooterProps {
+  readonly darkMode: boolean;
+}
 
-  @media (max-width: 550px) {
-    justify-content: space-around;
+export const CustomToolbar = styled(Toolbar)<FooterProps>`
+  && {
+    background-color: ${props => (props.darkMode ? Colors.Background : '#56dafe')};
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+    @media (max-width: 550px) {
+      justify-content: space-around;
+    }
   }
 `;
 

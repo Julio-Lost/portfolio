@@ -2,6 +2,10 @@ import styled, { keyframes } from 'styled-components';
 import { Colors } from '../../../shared/constants';
 import Card from '@material-ui/core/Card';
 
+interface KnowledgeProps {
+  readonly darkMode: boolean;
+}
+
 const rotateCenter = keyframes`
   0% {
     -webkit-transform: translateZ(0);
@@ -17,7 +21,7 @@ const rotateCenter = keyframes`
   }
 `;
 
-export const CustomDiv = styled.div<{ darkMode: boolean }>`
+export const CustomDiv = styled.div<KnowledgeProps>`
   background-color: ${props => (props.darkMode ? Colors.Selection : '#E3F9FF')};
   padding-top: 12vh;
   height: auto;
@@ -27,12 +31,14 @@ export const CustomDiv = styled.div<{ darkMode: boolean }>`
   }
 `;
 
-export const CustomCard = styled(Card)<{ darkMode: boolean }>`
-  background-color: ${props => (props.darkMode ? Colors.White : Colors.Foreground)};
+export const CustomCard = styled(Card)<KnowledgeProps>`
+  && {
+    background-color: ${props => (props.darkMode ? Colors.White : Colors.Foreground)};
 
-  &:hover {
-    cursor: pointer;
-    animation: ${rotateCenter} 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    &:hover {
+      cursor: pointer;
+      animation: ${rotateCenter} 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    }
   }
 `;
 
