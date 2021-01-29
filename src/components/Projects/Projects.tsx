@@ -26,13 +26,7 @@ export const Projects = () => {
       <S.CustomDivCorpo>
         <S.CustomTextProjetos darkMode={darkMode.darkMode}>Projetos</S.CustomTextProjetos>
       </S.CustomDivCorpo>
-      <div
-        style={{
-          display: 'flex',
-          justifyContent: 'center',
-          padding: 30,
-        }}
-      >
+      <S.CustomDivCorpo>
         <S.CustomCard darkMode={darkMode.darkMode} elevation={10} onClick={navigate}>
           <CardContent style={{ textAlign: 'center' }}>
             <S.CustomTextAcesso darkMode={darkMode.darkMode} color='inherit' paragraph>
@@ -48,7 +42,7 @@ export const Projects = () => {
             </CardContent>
           </CardContent>
         </S.CustomCard>
-      </div>
+      </S.CustomDivCorpo>
     </S.CustomDiv>
   );
 };

@@ -34,7 +34,6 @@ export const Toolbar = (props: IToolbarProps) => {
         <div>
           <Lottie options={defaultOptions} height={80} width={80} style={{ borderRadius: 50 }} />
         </div>
-
         <S.ContainerBotoes>
           <S.CustomToolbarText>
             <S.CustomTypography darkMode={darkMode.darkMode} onClick={props.handleScrollIntroduction} noWrap>

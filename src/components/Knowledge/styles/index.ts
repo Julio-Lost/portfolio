@@ -1,6 +1,7 @@
 import styled, { keyframes } from 'styled-components';
 import { Colors } from '../../../shared/constants';
 import Card from '@material-ui/core/Card';
+import { Typography } from '@material-ui/core';
 
 interface KnowledgeProps {
   readonly darkMode: boolean;
@@ -31,9 +32,13 @@ export const CustomDiv = styled.div<KnowledgeProps>`
   }
 `;
 
-export const CustomCard = styled(Card)<KnowledgeProps>`
+export const CustomCard = styled(Card)`
   && {
-    background-color: ${props => (props.darkMode ? Colors.White : Colors.Foreground)};
+    margin: 8px;
+    min-height: 150px;
+    min-width: 150px;
+    max-height: 150px;
+    background-color: ${Colors.White};
 
     &:hover {
       cursor: pointer;
@@ -52,4 +57,44 @@ export const CustomDivCard = styled.div`
     align-content: center;
     justify-content: center;
   }
+`;
+
+export const CustomTextLinguagem = styled(Typography)`
+  && {
+    font-size: 16px;
+    font-weight: bold;
+    color: ${Colors.Black};
+    white-space: pre-line;
+  }
+`;
+
+export const CustomTextExperiencia = styled(Typography)`
+  && {
+    font-size: 12px;
+    color: ${Colors.Black};
+    font-family: fantasy;
+  }
+`;
+
+export const CustomTextConhecimentos = styled(Typography)`
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  flex-direction: column;
+`;
+
+export const CustomTextConhecimentosCorpo = styled(Typography)<KnowledgeProps>`
+  && {
+    font-size: 32px;
+    font-weight: bold;
+    color: ${props => (props.darkMode ? Colors.White : Colors.Black)};
+    padding: 8px;
+    font-family: sans-serif;
+  }
+`;
+
+export const CustomDivCorpo = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 `;

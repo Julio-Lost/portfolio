@@ -76,46 +76,13 @@ export const Knowledge = () => {
 
   return (
     <S.CustomDiv darkMode={darkMode.darkMode}>
-      <div
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          padding: 30,
-          flexDirection: 'column',
-        }}
-      >
-        <Typography
-          style={{
-            fontSize: 32,
-            fontWeight: 'bold',
-            color: darkMode.darkMode ? Colors.White : Colors.Black,
-            padding: 8,
-            fontFamily: 'sans-serif',
-          }}
-        >
-          Conhecimentos
-        </Typography>
-      </div>
-      <div
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          flexDirection: 'column',
-        }}
-      >
+      <S.CustomTextConhecimentos>
+        <S.CustomTextConhecimentosCorpo darkMode={darkMode.darkMode}>Conhecimentos</S.CustomTextConhecimentosCorpo>
+      </S.CustomTextConhecimentos>
+      <S.CustomDivCorpo>
         <S.CustomDivCard>
           {expericencia1.map((item, index) => (
-            <S.CustomCard
-              darkMode={darkMode.darkMode}
-              style={{
-                margin: 8,
-                minHeight: 150,
-                minWidth: 150,
-                maxHeight: 150,
-                backgroundColor: Colors.White,
-              }}
-              key={index}
-            >
+            <S.CustomCard key={index}>
               <CardContent style={{ textAlign: 'center' }}>
                 <item.icone
                   style={{
@@ -124,45 +91,19 @@ export const Knowledge = () => {
                   }}
                   color={item.cor}
                 />
-                <Typography
-                  style={{
-                    fontSize: 16,
-                    fontWeight: 'bold',
-                    color: Colors.Black,
-                    whiteSpace: 'pre-line',
-                  }}
-                >
-                  {item.linguagem}
-                </Typography>
-                <Typography
-                  style={{
-                    fontSize: 12,
-                    color: Colors.Black,
-                    fontFamily: 'fantasy',
-                  }}
-                  color='inherit'
-                >
+                <S.CustomTextLinguagem>{item.linguagem}</S.CustomTextLinguagem>
+                <S.CustomTextExperiencia color='inherit'>
                   {`${IncrementarAnoDeExperiencia(item.anosExperiencia)} ${AjustarTextoDeExperiencia(
                     item.anosExperiencia,
                   )}  de experiência`}
-                </Typography>
+                </S.CustomTextExperiencia>
               </CardContent>
             </S.CustomCard>
           ))}
         </S.CustomDivCard>
         <S.CustomDivCard>
           {expericencia2.map((item, index) => (
-            <S.CustomCard
-              darkMode={darkMode.darkMode}
-              style={{
-                margin: 8,
-                minHeight: 150,
-                minWidth: 150,
-                maxHeight: 150,
-                backgroundColor: Colors.White,
-              }}
-              key={index}
-            >
+            <S.CustomCard key={index}>
               <CardContent style={{ textAlign: 'center' }}>
                 <item.icone
                   style={{
@@ -171,45 +112,19 @@ export const Knowledge = () => {
                   }}
                   color={item.cor}
                 />
-                <Typography
-                  style={{
-                    fontSize: 16,
-                    fontWeight: 'bold',
-                    color: Colors.Black,
-                    whiteSpace: 'pre-line',
-                  }}
-                >
-                  {item.linguagem}
-                </Typography>
-                <Typography
-                  style={{
-                    fontSize: 12,
-                    color: Colors.Black,
-                    fontFamily: 'fantasy',
-                  }}
-                  color='inherit'
-                >
+                <S.CustomTextLinguagem>{item.linguagem}</S.CustomTextLinguagem>
+                <S.CustomTextExperiencia color='inherit'>
                   {`${IncrementarAnoDeExperiencia(item.anosExperiencia)} ${AjustarTextoDeExperiencia(
                     item.anosExperiencia,
                   )}  de experiência`}
-                </Typography>
+                </S.CustomTextExperiencia>
               </CardContent>
             </S.CustomCard>
           ))}
         </S.CustomDivCard>
         <S.CustomDivCard className='rotate-center'>
           {experiencia3.map((item, index) => (
-            <S.CustomCard
-              darkMode={darkMode.darkMode}
-              style={{
-                margin: 8,
-                minHeight: 150,
-                minWidth: 150,
-                maxHeight: 150,
-                backgroundColor: Colors.White,
-              }}
-              key={index}
-            >
+            <S.CustomCard key={index}>
               <CardContent style={{ textAlign: 'center' }}>
                 <item.icone
                   style={{
@@ -218,33 +133,17 @@ export const Knowledge = () => {
                   }}
                   color={item.cor}
                 />
-                <Typography
-                  style={{
-                    fontSize: 16,
-                    fontWeight: 'bold',
-                    color: Colors.Black,
-                    whiteSpace: 'pre-line',
-                  }}
-                >
-                  {item.linguagem}
-                </Typography>
-                <Typography
-                  style={{
-                    fontSize: 12,
-                    color: Colors.Black,
-                    fontFamily: 'fantasy',
-                  }}
-                  color='inherit'
-                >
+                <S.CustomTextLinguagem>{item.linguagem}</S.CustomTextLinguagem>
+                <S.CustomTextExperiencia color='inherit'>
                   {`${IncrementarAnoDeExperiencia(item.anosExperiencia)} ${AjustarTextoDeExperiencia(
                     item.anosExperiencia,
                   )}  de experiência`}
-                </Typography>
+                </S.CustomTextExperiencia>
               </CardContent>
             </S.CustomCard>
           ))}
         </S.CustomDivCard>
-      </div>
+      </S.CustomDivCorpo>
     </S.CustomDiv>
   );
 };
