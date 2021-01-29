@@ -57,6 +57,7 @@ export const CustomDivAboutMe = styled(Grid)`
 export const CustomTextAboutMe = styled(Typography)<AboutProps>`
   && {
     font-size: 18px;
+    color: ${props => (props.darkMode ? Colors.White : Colors.Black)};
 
     @media (max-width: 569px) {
       font-size: 14px;
