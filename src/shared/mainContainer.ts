@@ -1,6 +1,19 @@
 import styled from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 
-export const MainContainer = styled.div`
-  width: 80%;
-  margin: 0 auto;
+export const GlobalStyles = createGlobalStyle`
+  * {
+    padding: 0;
+    margin: 0;
+  }
+
+  html,
+  body,
+  div#__next {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+   
+  }
 `;
