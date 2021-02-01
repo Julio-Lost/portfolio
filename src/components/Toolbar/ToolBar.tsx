@@ -1,11 +1,11 @@
 import AppBar from '@material-ui/core/AppBar';
 import { IoMdMoon, IoMdSunny } from 'react-icons/io';
 import Lottie from 'react-lottie';
-import LogoAnimation from '../../assets/logo.json';
-import LogoDarkAnimation from '../../assets/logoDark.json';
 import { Colors } from '../../shared/constants';
 import { useDarkModeContext } from '../../shared/context/reducers/darkMode/darkModeContext';
 import * as S from './styles';
+
+import LogoAnimation from '../../assets/logo.json';
 
 interface IToolbarProps {
   handleLightMode: () => void;
@@ -22,7 +22,7 @@ export const Toolbar = (props: IToolbarProps) => {
   const defaultOptions = {
     loop: true,
     autoplay: true,
-    animationData: darkMode.darkMode ? LogoDarkAnimation : LogoAnimation,
+    animationData: LogoAnimation,
     rendererSettings: {
       preserveAspectRatio: 'xMidYMid slice',
     },

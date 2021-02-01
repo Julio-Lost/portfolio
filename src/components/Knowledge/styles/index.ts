@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
 import { Colors } from '../../../shared/constants';
 import Card from '@material-ui/core/Card';
 import { Typography } from '@material-ui/core';
@@ -23,7 +23,12 @@ const rotateCenter = keyframes`
 `;
 
 export const CustomDiv = styled.div<KnowledgeProps>`
-  background-color: ${props => (props.darkMode ? Colors.Selection : '#E3F9FF')};
+  background-color: ${props =>
+    props.darkMode
+      ? css`
+          ${Colors.Selection}
+        `
+      : css`#E3F9FF`};
   padding-top: 12vh;
   height: auto;
   padding-bottom: 24px;
@@ -87,7 +92,14 @@ export const CustomTextConhecimentosCorpo = styled(Typography)<KnowledgeProps>`
   && {
     font-size: 32px;
     font-weight: bold;
-    color: ${props => (props.darkMode ? Colors.White : Colors.Black)};
+    color: ${props =>
+      props.darkMode
+        ? css`
+            ${Colors.White}
+          `
+        : css`
+            ${Colors.Black}
+          `};
     padding: 8px;
     font-family: sans-serif;
   }

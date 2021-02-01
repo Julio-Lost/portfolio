@@ -1,5 +1,6 @@
 import Grid from '@material-ui/core/Grid';
 import Lottie from 'react-lottie';
+import { Contacts } from 'shared/constants/contatos';
 import IntroAnimation from '../../assets/intro.json';
 import { useDarkModeContext } from '../../shared/context/reducers/darkMode/darkModeContext';
 import * as S from './styles';
@@ -30,7 +31,7 @@ export const Introduction = () => {
             <S.CustomText darkMode={darkMode.darkMode} color='inherit'>
               Desenvolvedor Full Stack
             </S.CustomText>
-            <S.LinkLikedin variant='subtitle1' href='https://www.linkedin.com/in/julio-cesar-de-medeiros/'>
+            <S.LinkLikedin variant='subtitle1' href={Contacts.Linkedin}>
               <S.ButtonLinkedin variant='contained'>
                 <S.CustomTextInLinkedin color='inherit'>In</S.CustomTextInLinkedin>
                 <S.CustomTextLinkedin color='inherit'>Linkedin</S.CustomTextLinkedin>

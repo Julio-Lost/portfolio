@@ -1,5 +1,5 @@
 import { Button, Grid, Link, Typography } from '@material-ui/core';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { Colors } from '../../../shared/constants';
 
 interface IntroductionProps {
@@ -7,7 +7,12 @@ interface IntroductionProps {
 }
 
 export const CustomDiv = styled.div<IntroductionProps>`
-  background-color: ${props => (props.darkMode ? Colors.NewPurple : '#E3F9FF')};
+  background-color: ${props =>
+    props.darkMode
+      ? css`
+          ${Colors.NewPurple}
+        `
+      : css`#E3F9FF`};
 
   padding-top: 12vh;
   height: 100vh;
@@ -77,7 +82,14 @@ export const CustomTextIntroduction = styled(Typography)<IntroductionProps>`
   && {
     font-size: 28px;
     font-weight: bold;
-    color: ${props => (props.darkMode ? Colors.White : Colors.Black)};
+    color: ${props =>
+      props.darkMode
+        ? css`
+            ${Colors.White}
+          `
+        : css`
+            ${Colors.Black}
+          `};
 
     @media (max-width: 569px) {
       font-size: 23px;
@@ -88,7 +100,14 @@ export const CustomTextIntroduction = styled(Typography)<IntroductionProps>`
 export const CustomText = styled(Typography)<IntroductionProps>`
   && {
     font-size: 20px;
-    color: ${props => (props.darkMode ? Colors.White : Colors.Black)};
+    color: ${props =>
+      props.darkMode
+        ? css`
+            ${Colors.White}
+          `
+        : css`
+            ${Colors.Black}
+          `};
   }
 `;
 

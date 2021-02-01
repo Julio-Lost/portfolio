@@ -1,5 +1,5 @@
 import { Toolbar } from '@material-ui/core';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { Colors } from '../../../shared/constants';
 
 interface FooterProps {
@@ -8,7 +8,12 @@ interface FooterProps {
 
 export const CustomToolbar = styled(Toolbar)<FooterProps>`
   && {
-    background-color: ${props => (props.darkMode ? Colors.Background : '#56dafe')};
+    background-color: ${props =>
+      props.darkMode
+        ? css`
+            ${Colors.Background}
+          `
+        : css`#56dafe`};
     display: flex;
     justify-content: center;
     align-items: center;

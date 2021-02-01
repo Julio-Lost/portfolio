@@ -1,5 +1,5 @@
 import { Grid, Typography } from '@material-ui/core';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { Colors } from '../../../shared/constants';
 
 interface AboutProps {
@@ -7,7 +7,14 @@ interface AboutProps {
 }
 
 export const CustomDiv = styled.div<AboutProps>`
-  background-color: ${props => (props.darkMode ? Colors.Background : Colors.White)};
+  background-color: ${props =>
+    props.darkMode
+      ? css`
+          ${Colors.Background}
+        `
+      : css`
+          ${Colors.White}
+        `};
 
   padding-top: 12vh;
   height: 100vh;
@@ -31,7 +38,7 @@ export const CustomDivText = styled(Grid)`
 export const CustomImg = styled.img<AboutProps>`
   border-radius: 50%;
   border: 8px solid #00c7ff;
-  border: ${props => (props.darkMode ? '8px solid #fff;' : '8px solid #72E0FE')};
+  border: ${props => (props.darkMode ? css`8px solid #fff;` : css`8px solid #72E0FE`)};
 
   @media (max-width: 514px) {
     width: 150px;
@@ -57,7 +64,14 @@ export const CustomDivAboutMe = styled(Grid)`
 export const CustomTextAboutMe = styled(Typography)<AboutProps>`
   && {
     font-size: 18px;
-    color: ${props => (props.darkMode ? Colors.White : Colors.Black)};
+    color: ${props =>
+      props.darkMode
+        ? css`
+            ${Colors.White}
+          `
+        : css`
+            ${Colors.Black}
+          `};
 
     @media (max-width: 569px) {
       font-size: 14px;
@@ -69,7 +83,14 @@ export const CustomTexAbout = styled(Typography)<AboutProps>`
   && {
     font-size: 32px;
     font-weight: bold;
-    color: ${props => (props.darkMode ? Colors.White : Colors.Black)};
+    color: ${props =>
+      props.darkMode
+        ? css`
+            ${Colors.White}
+          `
+        : css`
+            ${Colors.Black}
+          `};
     margin-bottom: 15px;
   }
 `;

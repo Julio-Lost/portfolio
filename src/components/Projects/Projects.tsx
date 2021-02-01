@@ -1,6 +1,7 @@
 import CardContent from '@material-ui/core/CardContent';
 import React from 'react';
 import Lottie from 'react-lottie';
+import { Contacts } from 'shared/constants/contatos';
 import GithubAnimation from '../../assets/github.json';
 import GithubLightAnimation from '../../assets/githubLight.json';
 import { useDarkModeContext } from '../../shared/context/reducers/darkMode/darkModeContext';
@@ -9,7 +10,7 @@ import * as S from './styles';
 export const Projects = () => {
   const { state: darkMode } = useDarkModeContext();
 
-  const navigate = () => (window.location.href = 'https://github.com/Julio-Lost');
+  const navigate = () => (window.location.href = Contacts.Github);
   const defaultOptions = {
     loop: true,
     autoplay: true,

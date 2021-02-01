@@ -1,5 +1,5 @@
 import { Toolbar, Typography } from '@material-ui/core';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { Colors } from '../../../shared/constants';
 
 interface ToolbarProps {
@@ -7,7 +7,14 @@ interface ToolbarProps {
 }
 
 export const CustomToolbar = styled(Toolbar)<ToolbarProps>`
-  background-color: ${props => (props.darkMode ? Colors.Background : Colors.White)};
+  background-color: ${props =>
+    props.darkMode
+      ? css`
+          ${Colors.Background}
+        `
+      : css`
+          ${Colors.White}
+        `};
   box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.1);
   height: 12vh;
   display: flex;
@@ -25,7 +32,14 @@ export const CustomTypography = styled(Typography)<ToolbarProps>`
     display: none;
     font-size: 16px;
     font-weight: bold;
-    color: ${props => (props.darkMode ? Colors.White : Colors.Black)};
+    color: ${props =>
+      props.darkMode
+        ? css`
+            ${Colors.White}
+          `
+        : css`
+            ${Colors.Black}
+          `};
     cursor: pointer;
 
     @media (min-width: 600px) {

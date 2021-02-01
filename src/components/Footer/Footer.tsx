@@ -8,6 +8,7 @@ import { AiFillLinkedin, AiFillInstagram } from 'react-icons/ai';
 import { FaTelegram } from 'react-icons/fa';
 import { VscGithub } from 'react-icons/vsc';
 import { GrMail } from 'react-icons/gr';
+import { Contacts } from 'shared/constants/contatos';
 
 export const Footer = () => {
   const { state: darkMode } = useDarkModeContext();
@@ -16,7 +17,7 @@ export const Footer = () => {
     <AppBar position='static'>
       <S.CustomToolbar darkMode={darkMode.darkMode}>
         <S.CustomToolbarText>
-          <Link href='https://github.com/Julio-Lost'>
+          <Link href={Contacts.Github}>
             <VscGithub
               style={{
                 fontSize: 24,
@@ -27,7 +28,7 @@ export const Footer = () => {
           </Link>
         </S.CustomToolbarText>
         <S.CustomToolbarText>
-          <Link href='https://github.com/Julio-Lost'>
+          <Link href={Contacts.Linkedin}>
             <AiFillLinkedin
               style={{
                 fontSize: 24,
@@ -38,7 +39,7 @@ export const Footer = () => {
           </Link>
         </S.CustomToolbarText>
         <S.CustomToolbarText>
-          <Link href='https://www.instagram.com/juliolost/'>
+          <Link href={Contacts.Intragram}>
             <AiFillInstagram
               style={{
                 fontSize: 24,
@@ -49,7 +50,7 @@ export const Footer = () => {
           </Link>
         </S.CustomToolbarText>
         <S.CustomToolbarText>
-          <Link href='mailto:juliocesarmedeirosdev@gmail.com'>
+          <Link href={Contacts.Email}>
             <GrMail
               style={{
                 fontSize: 24,
@@ -60,7 +61,7 @@ export const Footer = () => {
           </Link>
         </S.CustomToolbarText>
         <S.CustomToolbarText>
-          <Link href='https://t.me/juliocesardemedeiros'>
+          <Link href={Contacts.Telegram}>
             <FaTelegram
               style={{
                 fontSize: 24,
