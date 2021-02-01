@@ -1,8 +1,6 @@
 import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
 import Lottie from 'react-lottie';
 import IntroAnimation from '../../assets/intro.json';
-import { Colors } from '../../shared/constants';
 import { useDarkModeContext } from '../../shared/context/reducers/darkMode/darkModeContext';
 import * as S from './styles';
 

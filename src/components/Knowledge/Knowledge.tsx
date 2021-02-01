@@ -1,12 +1,9 @@
-import * as S from './styles';
-import { Colors } from '../../shared/constants';
-import { useDarkModeContext } from '../../shared/context/reducers/darkMode/darkModeContext';
-
 import CardContent from '@material-ui/core/CardContent';
-import Typography from '@material-ui/core/Typography';
-import { DiHtml5, DiJsBadge, DiCss3, DiReact, DiNodejs } from 'react-icons/di';
-import { SiDotNet, SiDocker, SiMicrosoftsqlserver, SiTypescript } from 'react-icons/si';
+import { DiCss3, DiHtml5, DiJsBadge, DiNodejs, DiReact } from 'react-icons/di';
+import { SiDocker, SiDotNet, SiMicrosoftsqlserver, SiTypescript } from 'react-icons/si';
 import { AjustarTextoDeExperiencia, IncrementarAnoDeExperiencia } from '../../shared/constants/functions';
+import { useDarkModeContext } from '../../shared/context/reducers/darkMode/darkModeContext';
+import * as S from './styles';
 
 const expericencia1 = [
   {

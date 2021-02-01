@@ -1,7 +1,5 @@
 import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
 import React from 'react';
-import { Colors } from '../../shared/constants';
 import { useDarkModeContext } from '../../shared/context/reducers/darkMode/darkModeContext';
 import * as S from './styles';
 

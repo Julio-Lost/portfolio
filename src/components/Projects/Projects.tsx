@@ -1,10 +1,8 @@
 import CardContent from '@material-ui/core/CardContent';
-import Typography from '@material-ui/core/Typography';
 import React from 'react';
 import Lottie from 'react-lottie';
 import GithubAnimation from '../../assets/github.json';
 import GithubLightAnimation from '../../assets/githubLight.json';
-import { Colors } from '../../shared/constants';
 import { useDarkModeContext } from '../../shared/context/reducers/darkMode/darkModeContext';
 import * as S from './styles';
 

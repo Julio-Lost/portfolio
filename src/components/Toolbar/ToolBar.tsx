@@ -1,12 +1,12 @@
-import * as S from './styles';
-import { Colors } from '../../shared/constants';
-import { useDarkModeContext } from '../../shared/context/reducers/darkMode/darkModeContext';
-import Lottie from 'react-lottie';
-
 import AppBar from '@material-ui/core/AppBar';
 import { IoMdMoon, IoMdSunny } from 'react-icons/io';
+import Lottie from 'react-lottie';
 import LogoAnimation from '../../assets/logo.json';
 import LogoDarkAnimation from '../../assets/logoDark.json';
+import { Colors } from '../../shared/constants';
+import { useDarkModeContext } from '../../shared/context/reducers/darkMode/darkModeContext';
+import * as S from './styles';
+
 interface IToolbarProps {
   handleLightMode: () => void;
   handleDarkMode: () => void;
