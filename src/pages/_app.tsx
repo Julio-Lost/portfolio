@@ -19,7 +19,7 @@ function App({ Component, pageProps }: AppProps) {
           content='Julio Cesar de Medeiros, TypeScript, JavaScript, React, React Native, .NET, dotnet, C#, Node, NodeJS, Docker, CI/CD, Azure, Linux'
         />
         <meta name='description' content="Hey, that's my website. Be free to come and see my experiences and open source projects." />
-        <meta name='title' content='Julio Cesar - Software Developer' />
+        <meta name='title' content='Julio Cesar - Full Stack' />
       </Head>
       <Component {...pageProps} />
     </>
